@@ -1,0 +1,20 @@
+<div class="form-signin">
+  <h2 class="form-signin-heading">UI 树洞</h2>
+  <form action="" method="POST">
+      {% csrf_token %}
+      <textarea name="content" style="width: 236px; height: 70px"></textarea>
+      {% if messages %}
+      {% for msg in messages %}
+      <div class="alert alert-{{ msg.tags }}">
+          {{ msg }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      <input type="submit" class="btn btn-large btn-primary">
+  </form>
+  <p> </p>
+  <a href="result/">直接看吐槽</a>
+  <p> 这是一个向同学们匿名分享你的秘密的平台</p>
+  <p> 源代码作者<a href="https://blog.blahgeek.com/ru-he-xie-ge-shu-dong.html">BlahGeek</a>，部分开源在<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>协议下</p>
+<p> 补完后的代码在<a href="https://github.com/hipaulshi/uiuictreehole">Github</a>上 根据<a href="http://opensource.org/licenses/MIT">MIT License</a>开源</p>
+</div>

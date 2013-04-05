@@ -1,0 +1,11 @@
+<div class="form-signin-result">
+  <!--<h2 class="form-signin-result-heading">银魂</h2>-->
+  {% load staticfiles %}
+  <img src="{% static "treeholeapp/foo.jpg"%}" width="150" height="" alt="不然你以为是啥。。。">
+
+  <p>
+      {% csrf_token %}
+      {% for anyitem in itemline %}
+      <li> {{anyitem.contentstr}}  -  {{anyitem.time}} </li>
+      {% endfor %}
+</div>
